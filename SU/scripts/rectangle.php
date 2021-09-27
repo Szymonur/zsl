@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4> kwadrat </h4>
+     <form method="post">
+         <input type="text" name="sideA" placeholder="Podaj długość boku a"> <br> <br>
+         <input type="text" name="sideB" placeholder="Podaj długość boku b"> <br> <br>
+         <input type="submit" value="Oblicz">
+     </form>
+<?php
+    if (!empty($_POST['sideA']) && ($_POST['sideB']) ) {
+        $sideA = $_POST['sideA']; 
+        $sideB = $_POST['sideB']; 
+        $area = $sideA*$sideB;
+        // $circiut = 2*$sideA;
+        echo <<< RESULT
+        <hr>
+         Pole prostokąta wynosi : $area cm<sup>2</sup>; <br> <br>
+         Obwód kwadartu wynosi : circiut cm;
+
+    RESULT;
+
+    } else {
+        echo '<hr>wpisz długość boku a';
+        echo '<hr>wpisz długość boku b';
+    }
+?>
+    
+</body>
+</html>
