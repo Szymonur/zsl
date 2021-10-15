@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="akapit"> Tekst </p>
+    Podaj kolor: <input type="text" id="pole"> 
+    <button id="przycisk">Kliknij</button>
+    <script>
+
+        // document.getElementById("akapit").style.color="red";
+       // document.getElementById("akapit").style.backgroundColor="blue";
+       let a=document.getElementById("akapit");
+       a.style.color="red";
+       a.style.backgroundColor="yellow";
+
+       
+       let przycisk=document.getElementById("przycisk");
+       przycisk.onclick=function(){
+        let p=document.getElementById("pole").value;
+        alert(p);
+       }
+       
+
+    </script>
+
+</body>
+</html>
