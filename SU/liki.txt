@@ -1,0 +1,19 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    fstream f1;
+    ifstream f2;
+    ofstream f3;
+    f3.open("plik.txt",ios_base::app);
+    f3 << "Hello world!\n";
+    f3.close();
+    f2.open("plik.txt",ios_base::out);
+    string s;
+    getline(f2, s);
+    f2.close();
+    cout << s;
+}
